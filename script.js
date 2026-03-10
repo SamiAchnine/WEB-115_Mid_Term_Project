@@ -18,26 +18,28 @@ function updateArea(area) {
     locationContainer.textContent = area.location;
 
     playerImgContainer.src = area.character;
-    playerImgContainer.height = 570;
+    playerImgContainer.height = 500;
 
     document.body.style.background = "url(" + area.background + ")";
     captionContainer.textContent = area.text;
     
     // choices section
     let choice1Button = document.createElement("button");
+    choice1Button.id = "choice1";
     choicesContainer.append(choice1Button);
     choice1Button.textContent = area.choices[0];
 
     let choice2Button = document.createElement("button");
+    choice2Button.id = 'choice2';
     choicesContainer.append(choice2Button);
     choice2Button.textContent = area.choices[1];
 }
 
-let mainArea = new Room();
+let dummyArea = new Room();
 
-mainArea.location = "dummy locale";
-mainArea.character = "./characterImages/scrnOctFemale2026_0308_223828.png";
-mainArea.text = "dummy text";
-mainArea.choices = ["Choice 1", "Choice 2"];
+dummyArea.location = "dummy locale";
+dummyArea.character = "./characterImages/skye_pose.png";
+dummyArea.text = "dummy text";
+dummyArea.choices = ["Choice 1", "Choice 2"];
 
-document.addEventListener("load", updateArea(mainArea));
+document.addEventListener("load", updateArea(dummyArea));
