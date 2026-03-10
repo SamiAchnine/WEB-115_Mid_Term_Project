@@ -16,30 +16,38 @@ class Room {
 
 function updateArea(area) {
     locationContainer.textContent = area.location;
-
     playerImgContainer.src = area.character;
     playerImgContainer.height = 500;
-
-    document.body.style.background = "url(" + area.background + ")";
+    document.body.style.background = `url(${area.background})`;
     captionContainer.textContent = area.text;
-    
-    // choices section
-    let choice1Button = document.createElement("button");
-    choice1Button.id = "choice1";
-    choicesContainer.append(choice1Button);
-    choice1Button.textContent = area.choices[0];
 
-    let choice2Button = document.createElement("button");
-    choice2Button.id = 'choice2';
-    choicesContainer.append(choice2Button);
-    choice2Button.textContent = area.choices[1];
+    choicesContainer.innerHTML = "";
+
+    area.choices.forEach(choice => {
+        const button = document.createElement("button");
+        button.textContent = choice.text;
+        button.addEventListener("click", () => updateArea(choice.next));
+        choicesContainer.append(button);
+    });
 }
 
-let dummyArea = new Room();
 
-dummyArea.location = "dummy locale";
-dummyArea.character = "./characterImages/skye_pose.png";
-dummyArea.text = "dummy text";
-dummyArea.choices = ["Choice 1", "Choice 2"];
+const dummyArea_1 = new Room("locale 1", "./characterImages/holly_idle.png", undefined, "text 1", []);
 
-document.addEventListener("load", updateArea(dummyArea));
+const dummyArea_0 = new Room(
+    "locale 0",
+    "./characterImages/elliot_pose.png",
+    undefined,
+    "text 0",
+    [{ text: "Go to area 1", next: dummyArea_1 }]
+);
+
+const dummyLoadArea = new Room(
+    "dummy locale",
+    "./characterImages/skye_pose.png",
+    undefined,
+    "dummy text",
+    [{ text: "Start", next: dummyArea_0 }]
+);
+
+document.addEventListener("load", updateArea(dummyLoadArea));
