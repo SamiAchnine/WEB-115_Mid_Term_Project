@@ -38,6 +38,11 @@ function updateArea(area) {
 }
 
 
+// -------------------------- AREA HELL --------------------------
+// ALL THE BELOW CODE IS RAW, UNFILTERED, AND ABYSMAL, AS I AM 
+// LITERALLY JUST DECLARING ROOMS YOU WILL GO TO. THE FIRST THREE
+// ARE FOR DEBUG USE ONLY!
+
 const dummyArea_1 = new Room("locale 1", "./characterImages/holly_idle.png", "./backgroundImages/splatsville.jpg", "text 1", []);
 
 const dummyArea_0 = new Room(
