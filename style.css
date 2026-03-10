@@ -1,0 +1,38 @@
+.css_imageContainer {
+    display: flex;
+    align-content: right;
+    margin-left: auto;
+}
+
+.css_locale, .css_caption {
+    margin: auto;
+    align-content: center;
+    text-align: center;
+}
+
+/* this was created by GPT, it automatically spaces the buttons out across the div's width span */
+.css_choices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+* {
+    color: white;
+    /* text-shadow: -1px -1px #000, 1px 1px #000, -1px -1px #000, 1px 1px #000; */
+    -webkit-text-stroke: 1px black;
+}
+
+p {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 33px;
+}

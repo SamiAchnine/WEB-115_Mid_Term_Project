@@ -18,7 +18,7 @@ function updateArea(area) {
     locationContainer.textContent = area.location;
     playerImgContainer.src = area.character;
     playerImgContainer.height = 500;
-    document.body.style.background = `url(${area.background})`;
+    document.body.style.background = `url(${area.background}) center / cover no-repeat`;;
     captionContainer.textContent = area.text;
 
     choicesContainer.innerHTML = "";
@@ -32,12 +32,12 @@ function updateArea(area) {
 }
 
 
-const dummyArea_1 = new Room("locale 1", "./characterImages/holly_idle.png", undefined, "text 1", []);
+const dummyArea_1 = new Room("locale 1", "./characterImages/holly_idle.png", "./backgroundImages/splatsville.jpg", "text 1", []);
 
 const dummyArea_0 = new Room(
     "locale 0",
     "./characterImages/elliot_pose.png",
-    undefined,
+    "./backgroundImages/lemuriaHub.jpeg",
     "text 0",
     [{ text: "Go to area 1", next: dummyArea_1 }]
 );
