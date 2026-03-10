@@ -19,13 +19,16 @@ function updateArea(area) {
     playerImgContainer.src = area.character;
     playerImgContainer.height = 500;
 
-    document.body.style.background = `linear-gradient(rgba(0,0,0,0.375), rgba(0,0,0,0.375)), url(${area.background}) center / cover no-repeat`;;
+    document.body.style.background = `linear-gradient(rgba(0,0,0,0.375), rgba(0,0,0,0.375)), url(${area.background}) center / cover no-repeat`;; 
+    // the above CSS is brought to you in part by GPT, again
+
     document.body.style.backgroun
 
     captionContainer.textContent = area.text;
 
     choicesContainer.innerHTML = "";
 
+    // this foreach loop was created with help from GPT, in an attempt to make the buttons actually move you to the right area
     area.choices.forEach(choice => {
         const button = document.createElement("button");
         button.textContent = choice.text;
