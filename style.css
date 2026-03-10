@@ -18,6 +18,23 @@
   gap: 1rem;
 }
 
+button {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 36px;
+    background-color: peru;
+    border-radius: 15px;
+    border: none;
+    transition: background-color 1s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: orange;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.705);
+}
+
 * {
     color: white;
     -webkit-text-stroke: 1px black;

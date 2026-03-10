@@ -18,7 +18,10 @@ function updateArea(area) {
     locationContainer.textContent = area.location;
     playerImgContainer.src = area.character;
     playerImgContainer.height = 500;
-    document.body.style.background = `url(${area.background}) center / cover no-repeat`;;
+
+    document.body.style.background = `linear-gradient(rgba(0,0,0,0.375), rgba(0,0,0,0.375)), url(${area.background}) center / cover no-repeat`;;
+    document.body.style.backgroun
+
     captionContainer.textContent = area.text;
 
     choicesContainer.innerHTML = "";
