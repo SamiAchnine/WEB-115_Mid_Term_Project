@@ -9,29 +9,18 @@ let currentArea;
 let hovering = false;
 let overlayIsOpen = false;
 
-playerImgContainer.addEventListener("mouseover", function () {
-    hovering = true;
-    imageHoverTooltipDisplay();
-});
-playerImgContainer.addEventListener("mouseout", function () {
-    hovering = false;
-    imageHoverTooltipDisplay();
-});
-
-document.addEventListener("keydown", (event) => {
-    if (event.key === 'b') {
-        console.log(currentArea.characterBio);
-        if (!overlayIsOpen) {
-            createOverlay();
-        }
-        else {
-            document.body.removeChild(document.getElementById("bioOverlay"));
-            overlayIsOpen = false;
-        }
-
+class Room {
+    constructor(location, characterImg, characterBio, background, text, choices) {
+        this.location = location;
+        this.characterImg = characterImg;
+        this.characterBio = characterBio;
+        this.background = background;
+        this.text = text;
+        this.choices = choices;
     }
+}
 
-})
+/* FUNCTIONS (EXCEPT ANONYMOUS ONES) */
 
 function createOverlay() {
     overlayIsOpen = true;
@@ -52,17 +41,6 @@ function createOverlay() {
     overlay.appendChild(closeBox);
 
     document.body.appendChild(overlay);
-}
-
-class Room {
-    constructor(location, characterImg, characterBio, background, text, choices) {
-        this.location = location;
-        this.characterImg = characterImg;
-        this.characterBio = characterBio;
-        this.background = background;
-        this.text = text;
-        this.choices = choices;
-    }
 }
 
 function updateArea(area) {
@@ -90,12 +68,44 @@ function updateArea(area) {
 function imageHoverTooltipDisplay() {
     if (hovering == true) {
         imageToolTipContainer.style.display = "block";
-        imageToolTipContainer.innerHTML = "Press B to open this person's bio!";
+        imageToolTipContainer.innerHTML = "Press Equal Sign button to open this person's bio!";
     }
     else {
         imageToolTipContainer.style.display = "none";
     }
 }
+
+/* EVENT LISTENERS (EXCEPT DYNAMICALLY CREATED ONES) */
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === "Enter") {
+        updateArea(currentArea.choices[0].next);
+    }
+})
+
+playerImgContainer.addEventListener("mouseover", function () {
+    hovering = true;
+    imageHoverTooltipDisplay();
+});
+playerImgContainer.addEventListener("mouseout", function () {
+    hovering = false;
+    imageHoverTooltipDisplay();
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === '=') {
+        console.log(currentArea.characterBio);
+        if (!overlayIsOpen) {
+            createOverlay();
+        }
+        else {
+            document.body.removeChild(document.getElementById("bioOverlay"));
+            overlayIsOpen = false;
+        }
+
+    }
+
+});
 
 
 // -------------------------- AREA HELL --------------------------
@@ -140,4 +150,6 @@ const dummyLoadArea = new Room(
     [{ text: "Start", next: dummyArea_0 }]
 );
 
+
+// the one last event listener to load the first area.
 document.addEventListener("load", updateArea(dummyLoadArea));
