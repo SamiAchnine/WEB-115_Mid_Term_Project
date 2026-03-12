@@ -74,7 +74,7 @@ div#bioOverlay {
    height: 100%;                           /* Full height */
    top: 0;
    left: 0;
-   background-color: rgba(104,49,0,0.85);  /* Semitransparent brown background */
+   background-color: rgba(0, 62, 104, 0.85);  /* Semitransparent brown background */
    display: flex;
    justify-content: center;
    align-items: center;

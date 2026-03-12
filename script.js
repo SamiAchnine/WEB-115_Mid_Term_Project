@@ -20,7 +20,7 @@ playerImgContainer.addEventListener("mouseout", function () {
 
 document.addEventListener("keydown", (event) => {
     if (event.key === 'b') {
-        console.log(currentArea.character);
+        console.log(currentArea.characterBio);
         if (!overlayIsOpen) {
             createOverlay();
         }
@@ -39,7 +39,7 @@ function createOverlay() {
     overlay.id = 'bioOverlay';
 
     let overlayBio = document.createElement("p");
-    overlayBio.textContent = currentArea.character;
+    overlayBio.textContent = currentArea.characterBio;
     overlay.appendChild(overlayBio);
     
     let closeBox = document.createElement("div");
@@ -55,9 +55,10 @@ function createOverlay() {
 }
 
 class Room {
-    constructor(location, character, background, text, choices) {
+    constructor(location, characterImg, characterBio, background, text, choices) {
         this.location = location;
-        this.character = character;
+        this.characterImg = characterImg;
+        this.characterBio = characterBio;
         this.background = background;
         this.text = text;
         this.choices = choices;
@@ -67,7 +68,7 @@ class Room {
 function updateArea(area) {
     currentArea = area;
     locationContainer.textContent = area.location;
-    playerImgContainer.src = area.character;
+    playerImgContainer.src = area.characterImg;
     playerImgContainer.height = 500;
 
     document.body.style.background = `linear-gradient(rgba(0,0,0,0.375), rgba(0,0,0,0.375)), url(${area.background}) center / cover no-repeat`;; 
@@ -105,6 +106,7 @@ function imageHoverTooltipDisplay() {
 const dummyArea_textInput = new Room(
     "locale text", 
     "./characterImages/skye_pose.png", 
+    undefined,
     "./backgroundImages/splatsville.jpg", 
     "text 1", 
     []
@@ -114,6 +116,7 @@ const dummyArea_textInput = new Room(
 const dummyArea_1 = new Room(
     "locale 1",
     "./characterImages/holly_idle.png", 
+    undefined,
     "./backgroundImages/splatsville.jpg", 
     "text 1", 
     [{text: "Text input", next: dummyArea_textInput}]
@@ -122,6 +125,7 @@ const dummyArea_1 = new Room(
 const dummyArea_0 = new Room(
     "locale 0",
     "./characterImages/elliot_pose.png",
+    undefined,
     "./backgroundImages/lemuriaHub.jpeg",
     "text 0",
     [{ text: "Go to area 1", next: dummyArea_1 }]
@@ -130,6 +134,7 @@ const dummyArea_0 = new Room(
 const dummyLoadArea = new Room(
     "dummy locale",
     "./characterImages/skye_pose.png",
+    "This is totally Skye's Bio!",
     undefined,
     "dummy text",
     [{ text: "Start", next: dummyArea_0 }]
