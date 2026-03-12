@@ -2,7 +2,57 @@ const locationContainer = document.getElementById("locationContainer");
 const playerImgContainer = document.getElementById("playerImgContainer");
 const captionContainer = document.getElementById("captionContainer");
 const choicesContainer = document.getElementById("choicesContainer");
+const imageToolTipContainer = document.getElementById("imageToolTipContainer");
 
+let currentArea;
+
+let hovering = false;
+let overlayIsOpen = false;
+
+playerImgContainer.addEventListener("mouseover", function () {
+    hovering = true;
+    imageHoverTooltipDisplay();
+});
+playerImgContainer.addEventListener("mouseout", function () {
+    hovering = false;
+    imageHoverTooltipDisplay();
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === 'b') {
+        console.log(currentArea.character);
+        if (!overlayIsOpen) {
+            createOverlay();
+        }
+        else {
+            document.body.removeChild(document.getElementById("bioOverlay"));
+            overlayIsOpen = false;
+        }
+
+    }
+
+})
+
+function createOverlay() {
+    overlayIsOpen = true;
+    let overlay = document.createElement("div");
+    overlay.id = 'bioOverlay';
+
+    let overlayBio = document.createElement("p");
+    overlayBio.textContent = currentArea.character;
+    overlay.appendChild(overlayBio);
+    
+    let closeBox = document.createElement("div");
+    closeBox.id = "bioOverlayClose";
+    closeBox.innerHTML = "&times;";
+    closeBox.onclick = function () {
+        document.body.removeChild(overlay);
+        overlayIsOpen = false;
+    }
+    overlay.appendChild(closeBox);
+
+    document.body.appendChild(overlay);
+}
 
 class Room {
     constructor(location, character, background, text, choices) {
@@ -15,14 +65,13 @@ class Room {
 }
 
 function updateArea(area) {
+    currentArea = area;
     locationContainer.textContent = area.location;
     playerImgContainer.src = area.character;
     playerImgContainer.height = 500;
 
     document.body.style.background = `linear-gradient(rgba(0,0,0,0.375), rgba(0,0,0,0.375)), url(${area.background}) center / cover no-repeat`;; 
-    // the above CSS is brought to you in part by GPT, again
-
-    document.body.style.backgroun
+    // the above CSS is brought to you in part by GPT, again    
 
     captionContainer.textContent = area.text;
 
@@ -37,13 +86,38 @@ function updateArea(area) {
     });
 }
 
+function imageHoverTooltipDisplay() {
+    if (hovering == true) {
+        imageToolTipContainer.style.display = "block";
+        imageToolTipContainer.innerHTML = "Press B to open this person's bio!";
+    }
+    else {
+        imageToolTipContainer.style.display = "none";
+    }
+}
+
 
 // -------------------------- AREA HELL --------------------------
 // ALL THE BELOW CODE IS RAW, UNFILTERED, AND ABYSMAL, AS I AM 
 // LITERALLY JUST DECLARING ROOMS YOU WILL GO TO. THE FIRST THREE
 // ARE FOR DEBUG USE ONLY!
 
-const dummyArea_1 = new Room("locale 1", "./characterImages/holly_idle.png", "./backgroundImages/splatsville.jpg", "text 1", []);
+const dummyArea_textInput = new Room(
+    "locale text", 
+    "./characterImages/skye_pose.png", 
+    "./backgroundImages/splatsville.jpg", 
+    "text 1", 
+    []
+);
+
+
+const dummyArea_1 = new Room(
+    "locale 1",
+    "./characterImages/holly_idle.png", 
+    "./backgroundImages/splatsville.jpg", 
+    "text 1", 
+    [{text: "Text input", next: dummyArea_textInput}]
+);
 
 const dummyArea_0 = new Room(
     "locale 0",
