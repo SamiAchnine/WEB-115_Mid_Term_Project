@@ -8,6 +8,7 @@ let currentArea;
 
 let hovering = false;
 let overlayIsOpen = false;
+let enterCooldown = false;
 
 class Room {
     constructor(location, characterImg, characterBio, background, text, choices) {
@@ -78,8 +79,11 @@ function imageHoverTooltipDisplay() {
 /* EVENT LISTENERS (EXCEPT DYNAMICALLY CREATED ONES) */
 
 document.addEventListener('keydown', (event) => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && !enterCooldown) {
+        enterCooldown = true;
+        // GPT helped me come up with the cooldown solution 
         updateArea(currentArea.choices[0].next);
+        setTimeout(() => {enterCooldown = false}, 560);
     }
 })
 
@@ -102,9 +106,7 @@ document.addEventListener("keydown", (event) => {
             document.body.removeChild(document.getElementById("bioOverlay"));
             overlayIsOpen = false;
         }
-
     }
-
 });
 
 
@@ -112,15 +114,6 @@ document.addEventListener("keydown", (event) => {
 // ALL THE BELOW CODE IS RAW, UNFILTERED, AND ABYSMAL, AS I AM 
 // LITERALLY JUST DECLARING ROOMS YOU WILL GO TO. THE FIRST THREE
 // ARE FOR DEBUG USE ONLY!
-
-const dummyArea_textInput = new Room(
-    "locale text", 
-    "./characterImages/skye_pose.png", 
-    undefined,
-    "./backgroundImages/splatsville.jpg", 
-    "text 1", 
-    []
-);
 
 
 const dummyArea_1 = new Room(
