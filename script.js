@@ -122,7 +122,7 @@ const dummyArea_1 = new Room(
     undefined,
     "./backgroundImages/splatsville.jpg", 
     "text 1", 
-    [{text: "Text input", next: dummyArea_textInput}]
+    []
 );
 
 const dummyArea_0 = new Room(
