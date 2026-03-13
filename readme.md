@@ -4,9 +4,6 @@ TODO:
  - add all text from the google dockie in to the actual JS infrastructure (really long JS file inkoming)
 
 We need images of:
- - Outside Inkblot Art Academy
- - Outside the Train Station
- - Main Plaza Area
  - Near Plaza Apartments
  - Inside the Lobby
  - Next to Crab N Go
@@ -16,9 +13,7 @@ We need images of:
  - Outside Man-O'-Wardrobe
  - Outside Crush Station
  - Outside Hotlantis
- - Inkopolis Square with the tower cut in half
+ - Inkopolis Square with the tower cut in half (photoshop needed)
  - In Holly's Apartment
  - Inside the broken tower
- - In front of Crusty Sean's Food Truck
- - In front of Ammo Knights in Inkopolis
  - Anarchy Splatcast
