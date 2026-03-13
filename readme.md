@@ -1,12 +1,9 @@
 TODO:
  - get more images of the cast
-
  - get background images
  - add all text from the google dockie in to the actual JS infrastructure (really long JS file inkoming)
 
 We need images of:
- - Holly with a weapon
- - Elliot/Skye without a weapon
  - A jellyfish
  - Marigold
  - Outside Inkblot Art Academy
