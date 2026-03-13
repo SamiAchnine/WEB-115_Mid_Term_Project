@@ -4,7 +4,6 @@ TODO:
  - add all text from the google dockie in to the actual JS infrastructure (really long JS file inkoming)
 
 We need images of:
- - A jellyfish
  - Marigold
  - Outside Inkblot Art Academy
  - Outside the Train Station
