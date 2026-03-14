@@ -130,6 +130,393 @@ Bio for Holly to copy paste:
 Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.
 */
 
+const chapter1bTableTurfBox10 = new Room(
+    "Plaza - Train Station",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/plazaTrainStation.jpg",
+    "Let’s do this.",
+    [{text: "Continue", next: undefined}]
+);
+
+const chapter1bTableTurfBox9 = new Room(
+    "Plaza - Train Station",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/plazaTrainStation.jpg",
+    "I’m ready!",
+    [{text: "Continue", next: chapter1bTableTurfBox10}]
+);
+
+const chapter1bTableTurfBox8 = new Room(
+    "Plaza - Train Station",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/plazaTrainStation.jpg",
+    "So what do you all say, ready?",
+    [{text: "Continue", next: chapter1bTableTurfBox9}]
+);
+
+const chapter1bTableTurfBox7 = new Room(
+    "Plaza - Train Station",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/plazaTrainStation.jpg",
+    "Phew! Haven’t run faster in a really long time. Really wish we could swim through some ink to get here.",
+    [{text: "Continue", next: chapter1bTableTurfBox8}]
+);
+
+const chapter1bTableTurfBox6 = new Room(
+    "Plaza - Train Station",
+    undefined,
+    "",
+    "./backgroundImages/plazaTrainStation.jpg",
+    "...",
+    [{text: "Continue", next: chapter1bTableTurfBox7}]
+);
+
+const chapter1bTableTurfBox5 = new Room(
+    "Next to tableturf",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/tableTurf.jpg",
+    "That makes a lot of sense, well, now that we’re all united, we gotta go!",
+    [{text: "Continue", next: chapter1bTableTurfBox6}]
+);
+
+const chapter1bTableTurfBox4 = new Room(
+    "Next to tableturf",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/tableTurf.jpg",
+    "A mothership flew by and hit the tower!",
+    [{text: "Continue", next: chapter1bTableTurfBox5}]
+);
+
+const chapter1bTableTurfBox3 = new Room(
+    "Next to tableturf",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/tableTurf.jpg",
+    "We found some juicy tidbits about the Inkopolis situation — It’s crazy!",
+    [{text: "Continue", next: chapter1bTableTurfBox4}]
+);
+
+const chapter1bTableTurfBox2 = new Room(
+    "Next to tableturf",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/tableTurf.jpg",
+    "I couldn’t find any leads, so I thought the Tableturf clerk would help, but unfortunately I’ve got to wait in line.",
+    [{text: "Continue", next: chapter1bTableTurfBox3}]
+);
+
+const chapter1bTableTurfBox1 = new Room(
+    "Next to tableturf",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/tableTurf.jpg",
+    "There you are Elliot!",
+    [{text: "Continue", next: chapter1bTableTurfBox2}]
+);
+
+const chapter1bManOWardrobeBox7 = new Room(
+    "Man-o'-Wardrobe",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/manOWardrobe.jpg",
+    "It’s all or nothing.",
+    [{text: "Continue", next: chapter1bTableTurfBox1}]
+);
+
+const chapter1bManOWardrobeBox6 = new Room(
+    "Man-o'-Wardrobe",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/manOWardrobe.jpg",
+    "Interesting, but okay! Let’s go there and head to Inkopolis, quick, they need us!",
+    [{text: "Continue", next: chapter1bManOWardrobeBox7}]
+);
+
+const chapter1bManOWardrobeBox5 = new Room(
+    "Man-o'-Wardrobe",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/manOWardrobe.jpg",
+    "Yeah, I caught a glimpse of him on my way to Naut Couture, and it seems he was headed toward the tableturf battle table.",
+    [{text: "Continue", next: chapter1bManOWardrobeBox6}]
+);
+
+const chapter1bManOWardrobeBox4 = new Room(
+    "Man-o'-Wardrobe",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/manOWardrobe.jpg",
+    "Elliot was up by the lobby area, right?",
+    [{text: "Continue", next: chapter1bManOWardrobeBox5}]
+);
+
+const chapter1bManOWardrobeBox3 = new Room(
+    "Man-o'-Wardrobe",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/manOWardrobe.jpg",
+    "That’s horrible! We’ve got to get Elliot and go now!",
+    [{text: "Continue", next: chapter1bManOWardrobeBox4}]
+);
+
+const chapter1bManOWardrobeBox2 = new Room(
+    "Man-o'-Wardrobe",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/manOWardrobe.jpg",
+    "Yeah, I found out. As it turns out, a mothership crashed into the tower!",
+    [{text: "Continue", next: chapter1bManOWardrobeBox3}]
+);
+
+const chapter1bManOWardrobeBox1 = new Room(
+    "Man-o'-Wardrobe",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/manOWardrobe.jpg",
+    "Oh, hi Holly! Did you find a lead?",
+    [{text: "Continue", next: chapter1bManOWardrobeBox2}]
+);
+
+const chapter1bAmmoKnights = new Room(
+    "Ammo Knights",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/ammoKnights.jpg",
+    "Doesn't appear to be here.",
+    []
+);
+
+const chapter1bNautCouture = new Room(
+    "Naut Couture",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/NautCouture.jpg",
+    "Doesn't appear to be here.",
+    []
+);
+
+
+const chapter1bCrushStation = new Room(
+    "Crush Station",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/crushStation.jpg",
+    "Doesn't appear to be here.",
+    []
+);
+
+const chapter1bHotlantis = new Room(
+    "Hotlantis",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/hotlantis.jpg",
+    "Doesn't appear to be here.",
+    []
+);
+
+const chapter1bBox2 = new Room(
+    "At the end of the road with the shops",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/endOfRoad.png",
+    "I can’t see her too well, which store could she be in?",
+    []
+);
+
+// this is done to avoid ReferenceError
+
+chapter1bBox2.choices = [{text: "Ammo Knights", next: chapter1bAmmoKnights}, {text: "Naut Couture", next: chapter1bNautCouture}, {text: "Man-o'-Wardrobe", next: chapter1bManOWardrobeBox1}, {text: "Crush Station", next: chapter1bCrushStation}, {text: "Hotlantis", next: chapter1bHotlantis}];
+
+chapter1bHotlantis.choices = [{text: "Ammo Knights", next: chapter1bAmmoKnights}, {text: "Naut Couture", next: chapter1bNautCouture}, {text: "Man-o'-Wardrobe", next: chapter1bManOWardrobeBox1}, {text: "Crush Station", next: chapter1bCrushStation}];
+
+chapter1bCrushStation.choices = [{text: "Ammo Knights", next: chapter1bAmmoKnights}, {text: "Naut Couture", next: chapter1bNautCouture}, {text: "Man-o'-Wardrobe", next: chapter1bManOWardrobeBox1}, {text: "Hotlantis", next: chapter1bHotlantis}];
+
+chapter1bNautCouture.choices = [{text: "Ammo Knights", next: chapter1bAmmoKnights}, {text: "Man-o'-Wardrobe", next: chapter1bManOWardrobeBox1}, {text: "Crush Station", next: chapter1bCrushStation}, {text: "Hotlantis", next: chapter1bHotlantis}];
+
+chapter1bAmmoKnights.choices = [{text: "Naut Couture", next: chapter1bNautCouture}, {text: "Man-o'-Wardrobe", next: chapter1bManOWardrobeBox1}, {text: "Crush Station", next: chapter1bCrushStation}, {text: "Hotlantis", next: chapter1bHotlantis}];
+
+
+const chapter1bBox1 = new Room(
+    "Inside the lobby",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/lobby.jpg",
+    "Skye said she was around the shops area, let me head there!",
+    [{text: "Continue", next: chapter1bBox2}]
+);
+
+// CHAPTER 1a FIND SKYE
+
+const chapter1aFindSkyeBox12 = new Room(
+    "By the train station",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/plazaTrainStation.jpg",
+    "Let’s do this.",
+    [{text: "To Inkopolis!", next: undefined}]
+);
+
+const chapter1aFindSkyeBox11 = new Room(
+    "By the train station",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/plazaTrainStation.jpg",
+    "I’m ready!",
+    [{text: "Continue", next: chapter1aFindSkyeBox12}]
+);
+
+const chapter1aFindSkyeBox10 = new Room(
+    "By the train station",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/plazaTrainStation.jpg",
+    "Yep. Shall we go?",
+    [{text: "Continue", next: chapter1aFindSkyeBox11}]
+);
+
+const chapter1aFindSkyeBox9 = new Room(
+    "By the train station",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/plazaTrainStation.jpg",
+    "It’s the mothership, right?",
+    [{text: "Continue", next: chapter1aFindSkyeBox10}]
+);
+
+const chapter1aFindSkyeBox8 = new Room(
+    "By the train station",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/plazaTrainStation.jpg",
+    "I thought you were still looking around, but I got some information!",
+    [{text: "Continue", next: chapter1aFindSkyeBox9}]
+);
+
+const chapter1aFindSkyeBox7 = new Room(
+    "By the train station",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/plazaTrainStation.jpg",
+    "There you are Skye!",
+    [{text: "Continue", next: chapter1aFindSkyeBox8}]
+);
+
+const chapter1aFindSkyeBox6 = new Room(
+    "At the end of the road with the shops",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/endOfRoad.png",
+    "Let’s go there then!",
+    [{text: "Continue", next: chapter1aFindSkyeBox7}]
+);
+
+const chapter1aFindSkyeBox5 = new Room(
+    "At the end of the road with the shops",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/endOfRoad.png",
+    "Probably at the railway station if she got information already.",
+    [{text: "Continue", next: chapter1aFindSkyeBox6}]
+);
+
+const chapter1aFindSkyeBox4 = new Room(
+    "At the end of the road with the shops",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/endOfRoad.png",
+    "Where’d she go? We looked everywhere and she isn’t here!",
+    [{text: "Continue", next: chapter1aFindSkyeBox5}]
+);
+
+const chapter1aFindSkyeBox3 = new Room(
+    "At the end of the road with the shops",
+    undefined,
+    "",
+    "./backgroundImages/endOfRoad.png",
+    "...",
+    [{text: "Continue", next: chapter1aFindSkyeBox4}]
+);
+
+const chapter1aFindSkyeBox2 = new Room(
+    "Next to tableturf",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/tableTurf.jpg",
+    "Time’s a-wasting, we gotta get her, quick!",
+    [{text: "Continue", next: chapter1aFindSkyeBox3}]
+);
+
+const chapter1aFindSkyeBox1 = new Room(
+    "Next to tableturf",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/tableTurf.jpg",
+    "If I remember correctly, she was toward the shops.",
+    [{text: "Continue", next: chapter1aFindSkyeBox2}]
+);
+
+// CHAPTER 1a TABLE TURF BATTLE
+
+const chapter1aTableTurfBattleBox7 = new Room(
+    "Next to tableturf",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/tableTurf.jpg",
+    "C’mon, we gotta find Skye and get to Inkopolis, quick!",
+    [{text: "Continue", next: chapter1aFindSkyeBox1}]
+);
+
+const chapter1aTableTurfBattleBox6 = new Room(
+    "Next to tableturf",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/tableTurf.jpg",
+    "Those salmonids will pay for this!",
+    [{text: "Continue", next: chapter1aTableTurfBattleBox7}]
+);
+
+const chapter1aTableTurfBattleBox5 = new Room(
+    "Next to tableturf",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/tableTurf.jpg",
+    "As it turns out, a mothership crashed into the tower!",
+    [{text: "Continue", next: chapter1aTableTurfBattleBox6}]
+);
+
+const chapter1aTableTurfBattleBox4 = new Room(
+    "Next to tableturf",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/tableTurf.jpg",
+    "I wanted to play a little bit since I had gotten bored, but what’s the situation over there?",
+    [{text: "Continue", next: chapter1aTableTurfBattleBox5}]
+);
+
+const chapter1aTableTurfBattleBox3 = new Room(
+    "Next to tableturf",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/tableTurf.jpg",
+    "I found out about the situation… and why are you in line for a game of tableturf?",
+    [{text: "Continue", next: chapter1aTableTurfBattleBox4}]
+);
+
+const chapter1aTableTurfBattleBox2 = new Room(
+    "Next to tableturf",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/tableTurf.jpg",
+    "Yeah?",
+    [{text: "Continue", next: chapter1aTableTurfBattleBox3}]
+);
+
 const chapter1aTableTurfBattleBox1 = new Room(
     "Next to tableturf",
     "./characterImages/holly_idle.png",
@@ -138,6 +525,8 @@ const chapter1aTableTurfBattleBox1 = new Room(
     "Elliot!",
     [{text: "Continue", next: chapter1aTableTurfBattleBox2}]
 );
+
+// CHAPTER 1a
 
 const chapter1aBox2 = new Room(
     "Inside the lobby",
@@ -156,6 +545,8 @@ const chapter1aBox1 = new Room(
     "If I remember correctly, Elliot should be around here, but I don’t see him...",
     [{text: "Continue", next: chapter1aBox2}]
 );
+
+// CHAPTER 1
 
 const chapter1Box15 = new Room(
     "Inside the lobby",
@@ -295,6 +686,8 @@ const chapter1Box1 = new Room(
     [{text: "Continue", next: chapter1Box2}]
 );
 
+// PROLOGUE
+
 const prologueBox13 = new Room(
     "Plaza",
     "./characterImages/holly_idle.png",
@@ -303,7 +696,7 @@ const prologueBox13 = new Room(
     "Well, we just came back from the academy, and that’s over in Inkopolis. (What should I do?)",
     [
         {text: "Ask the Splatlandians for leads", next: chapter1Box1},
-        {text: "Go to Inkopolis", next: chapter2Box1}
+        {text: "Go to Inkopolis", next: undefined}
     ]
 );
 
@@ -414,6 +807,8 @@ const prologueBox1 = new Room(
     "Welcome to the Splatlands! A world where chaos rules and where you get to see the life of one Octoling named Holly! Let’s join her as she leaves school for the day.",
     [{text: "Okay!", next: prologueBox2}]
 );
+
+// DEBUG USE ONLY
 
 const dummyArea_1 = new Room(
     "locale 1",
