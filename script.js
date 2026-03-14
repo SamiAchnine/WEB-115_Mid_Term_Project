@@ -120,7 +120,7 @@ const dummyArea_1 = new Room(
     "locale 1",
     "./characterImages/holly_idle.png", 
     undefined,
-    "./backgroundImages/splatsville.jpg", 
+    "./backgroundImages/dummy_splatsville.jpg", 
     "text 1", 
     []
 );
@@ -129,7 +129,7 @@ const dummyArea_0 = new Room(
     "locale 0",
     "./characterImages/elliot_pose.png",
     undefined,
-    "./backgroundImages/lemuriaHub.jpeg",
+    "./backgroundImages/dummy_lemuriaHub.jpeg",
     "text 0",
     [{ text: "Go to area 1", next: dummyArea_1 }]
 );
