@@ -47,6 +47,10 @@ p {
     font-weight: bold;
 }
 
+p#bioOverlayText {
+   padding: 45px;
+}
+
 h1 {
     font-size: 50px;
 }

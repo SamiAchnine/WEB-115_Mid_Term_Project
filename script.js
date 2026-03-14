@@ -30,6 +30,7 @@ function createOverlay() {
 
     let overlayBio = document.createElement("p");
     overlayBio.textContent = currentArea.characterBio;
+    overlayBio.id = "bioOverlayText";
     overlay.appendChild(overlayBio);
     
     let closeBox = document.createElement("div");
@@ -115,6 +116,22 @@ document.addEventListener("keydown", (event) => {
 // LITERALLY JUST DECLARING ROOMS YOU WILL GO TO. THE FIRST THREE
 // ARE FOR DEBUG USE ONLY!
 
+/* 
+Bio for Skye to copy paste:
+A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!
+*/
+
+/* 
+Bio for Elliot to copy paste:
+An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.
+*/
+
+/* 
+Bio for Holly to copy paste:
+Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.
+*/
+
+
 
 const dummyArea_1 = new Room(
     "locale 1",
@@ -137,7 +154,7 @@ const dummyArea_0 = new Room(
 const dummyLoadArea = new Room(
     "dummy locale",
     "./characterImages/skye_pose.png",
-    "This is totally Skye's Bio!",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
     undefined,
     "dummy text",
     [{ text: "Start", next: dummyArea_0 }]
