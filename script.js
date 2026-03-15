@@ -3,6 +3,7 @@ const playerImgContainer = document.getElementById("playerImgContainer");
 const captionContainer = document.getElementById("captionContainer");
 const choicesContainer = document.getElementById("choicesContainer");
 const imageToolTipContainer = document.getElementById("imageToolTipContainer");
+const anarchySplatcastSFX = new Audio("./BGM_Plaza_News_Intro.ogg")
 
 let currentArea;
 
@@ -59,7 +60,7 @@ function updateArea(area) {
         playerImgContainer.height = 500;
     }
 
-    document.body.style.background = `linear-gradient(rgba(0,0,0,0.375), rgba(0,0,0,0.375)), url(${area.background}) center / cover no-repeat`;; 
+    document.body.style.background = `linear-gradient(rgba(0,0,0,0.375), rgba(0,0,0,0.375)), url(${area.background}) 0px 0px / cover no-repeat`;; 
     // the above CSS is brought to you in part by GPT, again    
 
     captionContainer.textContent = area.text;
@@ -73,6 +74,10 @@ function updateArea(area) {
         button.addEventListener("click", () => updateArea(choice.next));
         choicesContainer.append(button);
     });
+
+    if (currentArea === EpilogueBox1) {
+        anarchySplatcastSFX.play();
+    }
 }
 
 function imageHoverTooltipDisplay() {
@@ -149,7 +154,7 @@ const ENDING = new Room(
 
 const EpilogueBox13 = new Room(
     "Inside Holly's apartment",
-    "./characterImage/holly_idle.png",
+    "./characterImages/holly_idle.png",
     "",
     undefined,
     "Wow, that’s pretty cool, I was technically on the news!",
@@ -281,7 +286,7 @@ const chapter4bBox11 = new Room(
     "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
     undefined,
     "Should I do the homework? No… I’m just tired right now. I saved Inkopolis after all.",
-    [{text: "Continue", next: chapter4aBox11}]
+    [{text: "Continue", next: chapter4bBox12}]
 );
 
 const chapter4bBox10 = new Room(
@@ -307,7 +312,7 @@ const chapter4bBox8 = new Room(
     "./characterImages/holly_idle.png",
     "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
     "./backgroundImages/inkopolis.jpg",
-    "I mean, you sure we have time? Looks a bit too late to me."
+    "I mean, you sure we have time? Looks a bit too late to me.",
     [{text: "Continue", next: chapter4bBox9}]
 );
 
@@ -325,7 +330,7 @@ const chapter4bBox6 = new Room(
     "./characterImages/holly_idle.png",
     "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
     "./backgroundImages/ammoKnightsInkopolis.jpg",
-    "Good sign. Let’s just tape it here… surely Donny won’t mind if we put it next to his store."
+    "Good sign. Let’s just tape it here… surely Donny won’t mind if we put it next to his store.",
     [{text: "Continue", next: chapter4bBox7}]
 );
 
@@ -334,7 +339,7 @@ const chapter4bBox5 = new Room(
     "./characterImages/holly_idle.png",
     "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
     "./backgroundImages/inkopolis.jpg",
-    "“There were a lot of salmonids here, but they’ve been cleared out since the mothership hit. Pretty sure the mothership is gone, call the police if they show up again.”"
+    "“There were a lot of salmonids here, but they’ve been cleared out since the mothership hit. Pretty sure the mothership is gone, call the police if they show up again.”",
     [{text: "Continue", next: chapter4bBox6}]
 );
 
@@ -370,7 +375,7 @@ const chapter4bBox1 = new Room(
     "./characterImages/holly_idle.png",
     "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
     "./backgroundImages/inkopolis.jpg",
-    "We should just put up a sign and leave, honestly. Would mean I get home in time to do some work."
+    "We should just put up a sign and leave, honestly. Would mean I get home in time to do some work.",
     [{text: "Continue", next: chapter4bBox2}]
 );
 
@@ -517,7 +522,7 @@ const chapter4aaBox4 = new Room(
     "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
     "./backgroundImages/insideBrokenLobby.jpg",
     "Despite bearing his likeness, no, it’s not run by him anymore. It’s run by someone else now.",
-    [{text: "Continue", next: chapter4aaBox5}]
+    [{text: "Continue", next: chapter4aaBox6}]
 );
 
 const chapter4aaBox3 = new Room(
@@ -619,7 +624,7 @@ const chapter4aBox3 = new Room(
     "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
     "./backgroundImages/inkopolis.jpg",
     "Here I come!",
-    [{text: "Continue", next: chapter4aBox4}]
+    [{text: "Continue", next: chapter4aBox5}]
 );
 
 const chapter4aBox2 = new Room(
@@ -1158,7 +1163,7 @@ const chapter2aBox1 = new Room(
     "",
     "./backgroundImages/inkopolis.jpg",
     "Holly and the gang fought hard, but more salmonids kept spawning.",
-    [{text: "Continue", next: undefined}]
+    [{text: "Continue", next: chapter2aBox2}]
 );
 
 const chapter2Box7 = new Room(
@@ -1214,7 +1219,7 @@ const chapter2Box2 = new Room(
     "./characterImages/skye_idle.png",
     "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
     "./backgroundImages/plazaTrainStation.jpg",
-    "Alright."
+    "Alright.",
     [{text: "Continue", next: chapter2Box3}]
 );
 
@@ -1223,7 +1228,7 @@ const chapter2Box1 = new Room(
     "./characterImages/holly_idle.png",
     "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
     "./backgroundImages/plazaTrainStation.jpg",
-    "We’re already at the station here, let’s go to Inkopolis."
+    "We’re already at the station here, let’s go to Inkopolis.",
     [{text: "Continue", next: chapter2Box2}]
 );
 
@@ -1938,4 +1943,4 @@ const dummyLoadArea = new Room(
 
 
 // the one last event listener to load the first area.
-document.addEventListener("load", updateArea(dummyLoadArea));
+document.addEventListener("load", updateArea(prologueBox1));
