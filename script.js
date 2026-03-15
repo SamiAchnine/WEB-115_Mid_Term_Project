@@ -138,6 +138,610 @@ Bio for Holly to copy paste:
 Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.
 */
 
+const ENDING = new Room(
+    "ENDING",
+    undefined,
+    "",
+    undefined,
+    "End.",
+    []
+);
+
+const EpilogueBox13 = new Room(
+    "Inside Holly's apartment",
+    "./characterImage/holly_idle.png",
+    "",
+    undefined,
+    "Wow, that’s pretty cool, I was technically on the news!",
+    [{text: "Continue to Ending", next: ENDING}]
+);
+
+const EpilogueBox12 = new Room(
+    "Anarchy Splatcast",
+    undefined,
+    "",
+    "./backgroundImages/anarchySplatcast.jpg",
+    "Shiver: Well, that’s all for this one. Let’s see the current battle stages.",
+    [{text: "Continue", next: EpilogueBox13}]
+);
+
+const EpilogueBox11 = new Room(
+    "Anarchy Splatcast",
+    undefined,
+    "",
+    "./backgroundImages/anarchySplatcast.jpg",
+    "Big Man: Ay, ayy, ayyyy!",
+    [{text: "Continue", next: EpilogueBox12}]
+);
+
+const EpilogueBox10 = new Room(
+    "Anarchy Splatcast",
+    undefined,
+    "",
+    "./backgroundImages/anarchySplatcast.jpg",
+    "Shiver: There was a mothership there?",
+    [{text: "Continue", next: EpilogueBox11}]
+);
+
+const EpilogueBox9 = new Room(
+    "Anarchy Splatcast",
+    undefined,
+    "",
+    "./backgroundImages/anarchySplatcast.jpg",
+    "Frye: No one knows who did it, but good job! Would’ve probably taken Grizzco weeks to sort the Mothership out.",
+    [{text: "Continue", next: EpilogueBox10}]
+);
+
+const EpilogueBox8 = new Room(
+    "Anarchy Splatcast",
+    undefined,
+    "",
+    "./backgroundImages/anarchySplatcast.jpg",
+    "Shiver: My bad, I guess. *sigh*, yeah, the tower was cleared up.",
+    [{text: "Continue", next: EpilogueBox9}]
+);
+
+const EpilogueBox7 = new Room(
+    "Anarchy Splatcast",
+    undefined,
+    "",
+    "./backgroundImages/anarchySplatcast.jpg",
+    "Big Man: AYYY!",
+    [{text: "Continue", next: EpilogueBox8}]
+);
+
+const EpilogueBox6 = new Room(
+    "Anarchy Splatcast",
+    undefined,
+    "",
+    "./backgroundImages/anarchySplatcast.jpg",
+    "Shiver: I guess so. Not like anyone cares.",
+    [{text: "Continue", next: EpilogueBox7}]
+);
+
+const EpilogueBox5 = new Room(
+    "Anarchy Splatcast",
+    undefined,
+    "",
+    "./backgroundImages/anarchySplatcast.jpg",
+    "Frye: Wait, we've gote an update on the Inkopolis situation? Did they seriously get it fixed?",
+    [{text: "Continue", next: EpilogueBox6}]
+);
+
+const EpilogueBox4 = new Room(
+    "Anarchy Splatcast",
+    undefined,
+    "",
+    "./backgroundImages/anarchySplatcast.jpg",
+    "Big Man: Ay!",
+    [{text: "Continue", next: EpilogueBox5}]
+);
+
+const EpilogueBox3 = new Room(
+    "Anarchy Splatcast",
+    undefined,
+    "",
+    "./backgroundImages/anarchySplatcast.jpg",
+    "Frye: Anarchy Splatcast! We’re live!",
+    [{text: "Continue", next: EpilogueBox4}]
+);
+
+const EpilogueBox2 = new Room(
+    "Anarchy Splatcast",
+    undefined,
+    "",
+    "./backgroundImages/anarchySplatcast.jpg",
+    "Shiver: Repping the splatlands, we are DEEP CUT!",
+    [{text: "Continue", next: EpilogueBox3}]
+);
+
+const EpilogueBox1 = new Room(
+    "Anarchy Splatcast",
+    undefined,
+    "",
+    undefined,
+    "Holly checks the news broadcast the next morning.",
+    [{text: "Continue", next: EpilogueBox2}]
+);
+
+// CHAPTER 4b
+
+const chapter4bBox12 = new Room(
+    "Inside Holly's Apartment",
+    undefined,
+    "",
+    undefined,
+    "Sign posted, sleep achieved!",
+    [{text: "Continue to epilogue", next: EpilogueBox1}]
+);
+
+const chapter4bBox11 = new Room(
+    "Inside Holly's Apartment",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    undefined,
+    "Should I do the homework? No… I’m just tired right now. I saved Inkopolis after all.",
+    [{text: "Continue", next: chapter4aBox11}]
+);
+
+const chapter4bBox10 = new Room(
+    "The Square",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/inkopolis.jpg",
+    "Bye!",
+    [{text: "Continue", next: chapter4bBox11}]
+);
+
+const chapter4bBox9 = new Room(
+    "The Square",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/inkopolis.jpg",
+    "I’ll stay out here, I wanted to get something to eat before heading home. See you tomorrow, both of you!",
+    [{text: "Continue", next: chapter4bBox10}]
+);
+
+const chapter4bBox8 = new Room(
+    "The Square",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/inkopolis.jpg",
+    "I mean, you sure we have time? Looks a bit too late to me."
+    [{text: "Continue", next: chapter4bBox9}]
+);
+
+const chapter4bBox7 = new Room(
+    "The Square",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/inkopolis.jpg",
+    "Alright, let’s head back to Splatsville and celebrate a bit!",
+    [{text: "Continue", next: chapter4bBox8}]
+);
+
+const chapter4bBox6 = new Room(
+    "The Square",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/ammoKnightsInkopolis.jpg",
+    "Good sign. Let’s just tape it here… surely Donny won’t mind if we put it next to his store."
+    [{text: "Continue", next: chapter4bBox7}]
+);
+
+const chapter4bBox5 = new Room(
+    "The Square",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/inkopolis.jpg",
+    "“There were a lot of salmonids here, but they’ve been cleared out since the mothership hit. Pretty sure the mothership is gone, call the police if they show up again.”"
+    [{text: "Continue", next: chapter4bBox6}]
+);
+
+const chapter4bBox4 = new Room(
+    "The Square",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/inkopolis.jpg",
+    "Well, it can’t be too hard. I’ll just scribble a bit of this down… Good.",
+    [{text: "Continue", next: chapter4bBox5}]
+);
+
+const chapter4bBox3 = new Room(
+    "The Square",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/inkopolis.jpg",
+    "What should the sign say?",
+    [{text: "Continue", next: chapter4bBox4}]
+);
+
+const chapter4bBox2 = new Room(
+    "The Square",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/inkopolis.jpg",
+    "I see it, I see it. Not the work part, but it is getting a bit late.",
+    [{text: "Continue", next: chapter4bBox3}]
+);
+
+const chapter4bBox1 = new Room(
+    "The Square",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/inkopolis.jpg",
+    "We should just put up a sign and leave, honestly. Would mean I get home in time to do some work."
+    [{text: "Continue", next: chapter4bBox2}]
+);
+
+// CHAPTER 4AB
+
+const chapter4abBox7 = new Room(
+    "Inside Holly's Apartment",
+    undefined,
+    "",
+    undefined,
+    "ENDING - Sleep achieved!",
+    [{text: "Continue to epilogue", next: EpilogueBox1}]
+);
+
+const chapter4abBox6 = new Room(
+    "Inside Holly's Apartment",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    undefined,
+    "Homework can wait. Sleep now.",
+    [{text: "Continue", next: chapter4abBox7}]
+);
+
+const chapter4abBox5 = new Room(
+    "Inside Holly's Apartment",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    undefined,
+    "Phew, what a day. Not all the time that I save Inkopolis, huh.",
+    [{text: "Continue", next: chapter4abBox6}]
+);
+
+const chapter4abBox4 = new Room(
+    "The Square",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/inkopolis.jpg",
+    "Thank you so much guys… See you!",
+    [{text: "Continue", next: chapter4abBox5}]
+);
+
+const chapter4abBox3 = new Room(
+    "The Square",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/inkopolis.jpg",
+    "I’ll bring you something tomorrow from our celebration, but absolutely go get some rest.",
+    [{text: "Continue", next: chapter4abBox4}]
+);
+
+const chapter4abBox2 = new Room(
+    "The Square",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/inkopolis.jpg",
+    "Holly, it’s fine. You did amazing out there. You deserve sleep, queen.",
+    [{text: "Continue", next: chapter4abBox3}]
+);
+
+const chapter4abBox1 = new Room(
+    "The Square",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/inkopolis.jpg",
+    "Nah, I’m totally fried. I’ve gotta head home. Sorry guys…",
+    [{text: "Continue", next: chapter4abBox2}]
+);
+
+const chapter4aaBox13 = new Room(
+    "The Square",
+    undefined,
+    "",
+    undefined,
+    "ENDING - Great job, everyone!",
+    [{text: "Continue to epilogue", next: EpilogueBox1}]
+);
+
+const chapter4aaBox12 = new Room(
+    "The Square",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/crustySean.jpg",
+    "Yeah!!",
+    [{text: "Continue", next: chapter4aaBox13}]
+);
+
+const chapter4aaBox11 = new Room(
+    "The Square",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/crustySean.jpg",
+    "I mean, you probably should take the food home, but c’mon, we just took down hordes of salmonids on our own! That calls for a feast!",
+    [{text: "Continue", next: chapter4aaBox12}]
+);
+
+const chapter4aaBox10 = new Room(
+    "The Square",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/crustySean.jpg",
+    "Nahhhh you’ll be fine. I would never be a bad influence.",
+    [{text: "Continue", next: chapter4aaBox11}]
+);
+
+const chapter4aaBox9 = new Room(
+    "The Square",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/crustySean.jpg",
+    "It’s getting a bit late, I might get in trouble homework-wise if I stick around.",
+    [{text: "Continue", next: chapter4aaBox10}]
+);
+
+const chapter4aaBox8 = new Room(
+    "The Square",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/crustySean.jpg",
+    "Good deal. That’s a good spot to sit.",
+    [{text: "Continue", next: chapter4aaBox9}]
+);
+
+const chapter4aaBox7 = new Room(
+    "The Square - Formerly Crusty Sean's Food Truck",
+    undefined,
+    "",
+    "./backgroundImages/crustySean.jpg",
+    "...",
+    [{text: "Continue", next: chapter4aaBox8}]
+);
+
+const chapter4aaBox6 = new Room(
+    "The Square",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/inkopolis.jpg",
+    "That’s alright, let’s go get something from there and head out.",
+    [{text: "Continue", next: chapter4aaBox7}]
+);
+
+const chapter4aaBox4 = new Room(
+    "The Square",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/insideBrokenLobby.jpg",
+    "Despite bearing his likeness, no, it’s not run by him anymore. It’s run by someone else now.",
+    [{text: "Continue", next: chapter4aaBox5}]
+);
+
+const chapter4aaBox3 = new Room(
+    "The Square",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/inkopolis.jpg",
+    "I remember Crusty Sean, he was working on some crusty adventure last time we saw him!",
+    [{text: "Continue", next: chapter4aaBox4}]
+);
+
+const chapter4aaBox2 = new Room(
+    "The Square",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/inkopolis.jpg",
+    "Ooh, let’s go there, the little food truck!",
+    [{text: "Continue", next: chapter4aaBox3}]
+);
+
+const chapter4aaBox1 = new Room(
+    "The Square",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/inkopolis.jpg",
+    "Despite the totally busted tower, seems most businesses are operating just fine!",
+    [{text: "Yeah!", next: chapter4aaBox2}]
+);
+
+const chapter4aBox11 = new Room(
+    "The Square",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/insideBrokenLobby.jpg",
+    "All done, shall we celebrate our success?",
+    [
+        {text: "Yeah!", next: chapter4aaBox1},
+        {text: "No, I'm tired", next: chapter4abBox1}
+    ]
+);
+
+const chapter4aBox10 = new Room(
+    "The Square",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/insideBrokenLobby.jpg",
+    "Hello, we found the issue with the tower and got rid of it, there was a mothership… yep… Okay, understood. Thanks, sir!",
+    [{text: "Continue", next: chapter4aBox11}]
+);
+
+const chapter4aBox9 = new Room(
+    "The Square",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/insideBrokenLobby.jpg",
+    "Ah, this is the phone number, let me give it a call.",
+    [{text: "Continue", next: chapter4aBox10}]
+);
+
+const chapter4aBox8 = new Room(
+    "The Square",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/insideBrokenLobby.jpg",
+    "Yep, this sure was hit by a mothership!",
+    [{text: "Continue", next: chapter4aBox9}]
+);
+
+const chapter4aBox7 = new Room(
+    "The Square",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/inkopolis.jpg",
+    "Let’s get moving here…",
+    [{text: "Continue", next: chapter4aBox8}]
+);
+
+const chapter4aBox6 = new Room(
+    "The Square",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/inkopolis.jpg",
+    "Hey, why are you dragging me into this?",
+    [{text: "Continue", next: chapter4aBox7}]
+);
+
+const chapter4aBox5 = new Room(
+    "The Square",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/inkopolis.jpg",
+    "No, Skye, you’re not going in alone. We’re all going together to check. Never know when you need someone to yank you away from falling debris.",
+    [{text: "Continue", next: chapter4aBox6}]
+);
+
+const chapter4aBox3 = new Room(
+    "The Square",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/inkopolis.jpg",
+    "Here I come!",
+    [{text: "Continue", next: chapter4aBox4}]
+);
+
+const chapter4aBox2 = new Room(
+    "The Square",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/inkopolis.jpg",
+    "It was on the inside of the lobby building… is it safe to go in and check?",
+    [{text: "Continue", next: chapter4aBox3}]
+);
+
+const chapter4aBox1 = new Room(
+    "The Square",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/inkopolis.jpg",
+    "Anyone know the Inkopolis police phone number? We aren’t gonna call the fast response number, definitely.",
+    [{text: "Continue", next: chapter4aBox2}]
+);
+
+const chapter4Box5 = new Room(
+    "The Square",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/inkopolis.jpg",
+    "I think the least we can do is…",
+    [
+        {text: "Let the police know", next: chapter4aBox1},
+        {text: "Put up a sign and go back home before it gets dark", next: chapter4bBox1}
+    ]
+);
+
+const chapter4Box4 = new Room(
+    "The Square",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/inkopolis.jpg",
+    "Absolutely agree. Plus, it’s starting to get dark.",
+    [{text: "Continue", next: chapter4Box5}]
+);
+
+const chapter4Box3 = new Room(
+    "The Square",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/inkopolis.jpg",
+    "It took them years to build this tower for the first time. I don’t think a group of three school-age children could fix it in an afternoon.",
+    [{text: "Continue", next: chapter4Box4}]
+);
+
+const chapter4Box2 = new Room(
+    "The Square",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/inkopolis.jpg",
+    "Seems like a LOT of work.",
+    [{text: "Continue", next: chapter4Box3}]
+);
+
+const chapter4Box1 = new Room(
+    "The Square",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/inkopolis.jpg",
+    "So we’ve gotta fix the tower now, huh.",
+    [{text: "Continue", next: chapter4Box2}]
+);
+
+const chapter3Box6 = new Room(
+    "Inside Holly's Apartment",
+    undefined,
+    "",
+    undefined,
+    "ENDING - Homework done!",
+    [{text: "Continue to ending", next: ENDING}]
+);
+
+const chapter3Box5 = new Room(
+    "Inside Holly's Apartment",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    undefined,
+    "Argghhhhhhhhhhh…",
+    [{text: "Continue", next: chapter3Box6}]
+);
+
+const chapter3Box4 = new Room(
+    "Inside Holly's Apartment",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    undefined,
+    "Oh, fun. I still have homework to do. And it’s already dark out.",
+    [{text: "Continue", next: chapter3Box5}]
+);
+
+const chapter3Box3 = new Room(
+    "Plaza",
+    "./characterImages/skye_idle.png",
+    "A squid whose family is from Inkopolis. She was a big fan of the Squid Sisters as a little kid, and never really left that phase. Met Holly more recently, but they became really close friends quickly. She frequently misses class to win more turf war battles, making her really good at turf war!",
+    "./backgroundImages/plaza.jpg",
+    "See you probably not in class tomorrow!",
+    [{text: "Continue", next: chapter3Box4}]
+);
+
+const chapter3Box2 = new Room(
+    "Plaza",
+    "./characterImages/elliot_idle.png",
+    "An energetic little fella, loves cheering up Holly when she’s feeling down. He met Holly in secondary school, and have frequently been part of the same team in turf war battles they’ve played. His glasses were a gift from Holly on Elliot’s 14th birthday. He doesn’t need them, but still likes them for the awesome fit.",
+    "./backgroundImages/plaza.jpg",
+    "See you in class tomorrow.",
+    [{text: "Continue", next: chapter3Box3}]
+);
+
+const chapter3Box1 = new Room(
+    "Plaza",
+    "./characterImages/holly_idle.png",
+    "Native born in the Splatlands. She lives in a cozy state, with her comfy hoodie and headphones, enjoying laid back holiday breaks.",
+    "./backgroundImages/plaza.jpg",
+    "Bye everyone!",
+    [{text: "Continue", next: chapter3Box2}]
+);
+
 const chapter2bBox30 = new Room(
     "Inkopolis Square",
     "./characterImages/elliot_idle.png",
